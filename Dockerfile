@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS modules
+FROM golang:1.25-alpine AS modules
 
 WORKDIR /modules
 
