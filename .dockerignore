@@ -1,6 +1,7 @@
 tmp
 vendor
 .git
+.github
 **/*.log
 Dockerfile
 **/*.md
