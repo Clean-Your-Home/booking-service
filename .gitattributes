@@ -1,0 +1,2 @@
+*     text eol=lf
+*.go -text diff=golang
