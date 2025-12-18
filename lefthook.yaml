@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    formatting:
+      run: go fmt ./...
+      stage_fixed: true
+
+    vet:
+      run: go vet ./...
