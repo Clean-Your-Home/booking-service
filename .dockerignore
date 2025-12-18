@@ -1,0 +1,12 @@
+tmp
+vendor
+.git
+**/*.log
+Dockerfile
+**/*.md
+.air.toml
+.editorconfig
+.gitattributes
+.gitignore
+lefthook.yaml
+.czrc
