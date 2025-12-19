@@ -1,20 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"log"
+
+	"booking-service/internal/app"
 )
 
 func main() {
-	mux := http.NewServeMux()
-
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Hello from Go with Air hot reload!")
-	})
-
-	addr := ":8080"
-	fmt.Println("Server is running on", addr)
-	if err := http.ListenAndServe(addr, mux); err != nil {
-		fmt.Println("server error:", err)
+	a, err := app.New()
+	if err != nil {
+		log.Fatalf("init: %v", err)
+	}
+	if err := a.Run(); err != nil {
+		log.Fatalf("run: %v", err)
 	}
 }
